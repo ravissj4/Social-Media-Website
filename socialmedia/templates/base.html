@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,6 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
@@ -27,11 +27,11 @@
                     <li><a href="*"></a>Post</li>
                     <li><a href="*"></a>Groups</li>
                     <li><a href="*"></a>Create Group</li>
-                    <li><a href="{% url accounts:logout %}"></a>Log Out</li>
+                    <li><a href="{% url 'accounts:logout' %}"></a>Log Out</li>
                 {% else %}
                     <li><a href="*"></a>Groups</li>
-                    <li><a href="{% url accounts:login %}"></a>Log In</li>
-                    <li><a href="{% url accoutns:signup %}"></a>Sign Up</li>
+                    <li><a href="{% url 'accounts:login' %}"></a>Log In</li>
+                    <li><a href="{% url 'accounts:signup' %}"></a>Sign Up</li>
                 {% endif %}
             </ul>
         </div>
