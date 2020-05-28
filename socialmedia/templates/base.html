@@ -15,7 +15,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'socialmedia/css/master.css'%}">
+    <link rel="stylesheet" href="{% static 'simplesocial/css/master.css'%}">
 
 </head>
 <body>
@@ -24,14 +24,14 @@
             <a class="navbar-brand mynav" href="{% url 'home' %}">Social Media</a>
             <ul class="nav navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                    <li><a href="*"></a>Post</li>
-                    <li><a href="*"></a>Groups</li>
-                    <li><a href="*"></a>Create Group</li>
-                    <li><a href="{% url 'accounts:logout' %}"></a>Log Out</li>
+                    <li><a href="*" class="btn btn-simple">Post</a></li>
+                    <li><a href="*" class="btn btn-simple">Groups</a></li>
+                    <li><a href="*" class="btn btn-simple">Create Group</a></li>
+                    <li><a href="{% url 'accounts:logout' %}" class="btn btn-simple">Log out</a></li>
                 {% else %}
-                    <li><a href="*"></a>Groups</li>
-                    <li><a href="{% url 'accounts:login' %}"></a>Log In</li>
-                    <li><a href="{% url 'accounts:signup' %}"></a>Sign Up</li>
+                    <li><a href="*">Groups</a></li>
+                    <li><a href="{% url 'accounts:login' %}" class="btn btn-simple">Log In</a></li>
+                    <li><a href="{% url 'accounts:signup' %}" class="btn btn-simple">Sign Up</a></li>
                 {% endif %}
             </ul>
         </div>
