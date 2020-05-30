@@ -17,7 +17,10 @@ import misaka
 from django.contrib.auth import get_user_model
 User = get_user_model()
 
-# this is to use custom template tags in future
+# this is to use custom template tags used in posts/templates/posts/post_list.html
+# it allows to grab the details from this model to give to that app
+# specifically here inside GroupMember model, user_group can be grabbed by 
+# get_user_group inside that post_list.html tempalte
 from django import template
 register = template.Library()
 
